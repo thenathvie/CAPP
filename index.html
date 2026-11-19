@@ -1,4 +1,5 @@
 
+ 
 <!doctype html>
 <html lang="fr" data-theme="dark">
 <head>
@@ -416,7 +417,7 @@ const LOGO=`<svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="
 /* ---------- état et persistance ---------- */
 function normalize(r){
   const st=(r&&r.settings)||{};
-  const o={projects:[],log:[],settings:{max:3,name:'Nathan',theme:'auto',cap:240,weekend:false,focusMin:25,...st}};
+  const o={projects:[],log:[],settings:{max:3,name:'',theme:'auto',cap:240,weekend:false,focusMin:25,...st}};
   o.settings.max=Math.max(1,+o.settings.max||3);o.settings.cap=Math.max(30,+o.settings.cap||240);o.settings.focusMin=Math.max(5,Math.min(120,+o.settings.focusMin||25));
   o.projects=(r&&Array.isArray(r.projects)?r.projects:[]).map(p=>({
     id:p.id||uid(),name:String(p.name||'Sans titre'),cat:CATS[p.cat]?p.cat:'Autre',
@@ -1182,4 +1183,5 @@ async function pull(){
 </script>
 </body>
 </html>
+ 
  
